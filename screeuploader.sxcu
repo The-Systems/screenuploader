@@ -1,0 +1,10 @@
+﻿{
+  "Version": "12.4.1",
+  "Name": "screeuploader",
+  "DestinationType": "ImageUploader",
+  "RequestMethod": "POST",
+  "RequestURL": "https://YOURURL ",
+  "Body": "MultipartFormData",
+  "FileFormName": "upload",
+  "URL": "$json:response$"
+}
