@@ -2,13 +2,12 @@
 include "assets/config.php";
 
 if(isset($_FILES['upload']['name'])) {
+    $extension = strtolower(pathinfo($_FILES['upload']['name'], PATHINFO_EXTENSION));
     $filename = pathinfo($_FILES['upload']['name'], PATHINFO_FILENAME);
 
-    $extension = strtolower($filename);
     if (!in_array($extension, $allowed_extensions)) {
-        die('{"success":false, "response": "bad extension"}');
+        die('{"success":false, "response": "bad extension - '.$extension.'"}');
     }
-
     if ($_FILES['upload']['size'] > $max_size) {
         die('{"success":false, "response": "upload too big"}');
     }
@@ -17,7 +16,7 @@ if(isset($_FILES['upload']['name'])) {
     $name = $key . '.' . $extension;
     $path = "upload/" . $name;
     move_uploaded_file($_FILES['upload']['tmp_name'], $path);
-    die('{"success":true, "response": "' . $url . '/' . $name . '"}');
+    die('{"success":true, "response": "' . $url . '/upload/' . $name . '"}');
 
 } else {
 
