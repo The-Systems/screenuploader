@@ -8,4 +8,4 @@ $keylength = 10;
 
 $url = "";
 $auth = "";
-$dir = "/";
+$dir = "/upload";
