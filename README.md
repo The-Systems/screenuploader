@@ -11,6 +11,10 @@ Screenuploader for ShareX
 
 /
 
+#### Support
+
+https://discord.com/invite/txRvPZy
+
 #### License
 
     Copyright 2020 TheSystems
