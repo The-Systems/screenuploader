@@ -16,7 +16,7 @@ if(isset($_GET['auth'])){ if($_GET['auth'] == $auth) {
         $name = $key . '.' . $extension;
         $path = $dir ."". $name;
         move_uploaded_file($_FILES['upload']['tmp_name'], $path);
-        die('{"success":true, "response": "' . $url . '/upload/' . $name . '"}');
+        die('{"success":true, "response": "' . $url . ''.$dir.'' . $name . '"}');
 
     } else {
 
